@@ -28,7 +28,7 @@ spec:
             requests:
               cpu: "0.5"
               memory: "256Mi"
-          image: "rhaversen/life-tracker-backend:${GITHUB_SHA}"
+          image: "rhaversen/life-tracker-backend:22ce7a88a8c486894b7c3b1d4019221994ebf5c9"
           imagePullPolicy: Always
           livenessProbe:
             httpGet:
