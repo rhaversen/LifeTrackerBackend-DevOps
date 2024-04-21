@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
     name: backend-deployment
-    namespace: life-tracker-prod
+    namespace: life-tracker-production
 spec:
     replicas: 3
     strategy:
@@ -28,7 +28,7 @@ spec:
                       requests:
                           cpu: "0.2"
                           memory: "256Mi"
-                  image: "rhaversen/life-tracker-backend:ce5151e65c1270aba1483e39fb4ca5021b1f8c23"
+                  image: "rhaversen/life-tracker-backend:0da2b85944843269954e1f1aad62388061995a45"
                   imagePullPolicy: Always
                   livenessProbe:
                       httpGet:
