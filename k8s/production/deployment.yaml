@@ -23,12 +23,12 @@ spec:
                 - name: backend-deployment
                   resources:
                       limits:
-                          cpu: "0.1"
-                          memory: "100Mi"
+                          cpu: "400m"
+                          memory: "300M"
                       requests:
-                          cpu: "0.05"
-                          memory: "50Mi"
-                  image: "rhaversen/life-tracker-backend:6a57c25af25f040d234dda38bedb103d8946d9f8"
+                          cpu: "250m"
+                          memory: "200M"
+                  image: "rhaversen/life-tracker-backend:fe4e0dd5f65dc4ed89ac5db709102161368a2abb"
                   imagePullPolicy: Always
                   livenessProbe:
                       httpGet:
