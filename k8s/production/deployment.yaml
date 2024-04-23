@@ -4,7 +4,7 @@ metadata:
     name: backend-deployment
     namespace: life-tracker-production
 spec:
-    replicas: 3
+    replicas: 2
     strategy:
         type: RollingUpdate
         rollingUpdate:
@@ -23,12 +23,12 @@ spec:
                 - name: backend-deployment
                   resources:
                       limits:
-                          cpu: "0.5"
-                          memory: "512Mi"
+                          cpu: "0.1"
+                          memory: "100Mi"
                       requests:
-                          cpu: "0.2"
-                          memory: "256Mi"
-                  image: "rhaversen/life-tracker-backend:0da2b85944843269954e1f1aad62388061995a45"
+                          cpu: "0.05"
+                          memory: "50Mi"
+                  image: "rhaversen/life-tracker-backend:6a57c25af25f040d234dda38bedb103d8946d9f8"
                   imagePullPolicy: Always
                   livenessProbe:
                       httpGet:
